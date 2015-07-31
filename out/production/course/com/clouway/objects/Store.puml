@@ -1,0 +1,54 @@
+@startuml
+
+abstract Store{
+address: String
+size: int
+}
+
+class Personal{
+firstName: String
+lastName: String
+phoneNumber: String
+duties: String
+Salary: int
+}
+class CommonWorker extends Personal{
+void organizeProducts()
+}
+class Seller extends Personal{
+void sell()
+}
+class Cleaner extends Personal{
+void cleanUp()
+}
+
+class Product{
+name: String
+expDate: String
+prize: int
+}
+class WormTemp extends Product{
+int getTemp()
+}
+class ColdTemp extends Product{
+int getTemp()
+}
+class NormalTemp extends Product{
+
+}
+class Client{
+firstName: String
+lastName: String
+}
+class PassingByClient extends Client{
+}
+class CardClient extends Client{
+}
+class PlatinumClient extends Client{
+}
+
+Store *-- Personal
+Store *-- Product
+Store *-- Client
+
+@enduml

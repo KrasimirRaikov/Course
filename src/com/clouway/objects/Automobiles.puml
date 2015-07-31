@@ -1,0 +1,15 @@
+@startuml
+
+class Automobiles{
+maxSpeed: int
+colour: String
+manifDate: String
+}
+
+class Opel extends Automobiles{
+weight: int
+numbPassengers: int
+}
+class Mercedes extends Automobiles
+class VW extends Automobiles
+@enduml
