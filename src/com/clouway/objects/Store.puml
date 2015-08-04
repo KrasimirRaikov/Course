@@ -47,8 +47,10 @@ class CardClient extends Client{
 class PlatinumClient extends Client{
 }
 
-Store *-- Personal
-Store *-- Product
-Store *-- Client
+Store o-- Personal
+Store o-- Product
+Store o-- Client
+Personal "sells"->Product
+Product<- "buys"Client
 
 @enduml

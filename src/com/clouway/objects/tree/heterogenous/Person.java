@@ -8,17 +8,19 @@ public class Person {
 
   /**
    * Set's person's name
+   *
    * @param name of the person
    */
-  public void setName(String name){
-    this.name=name;
+  public void setName(String name) {
+    this.name = name;
   }
 
   /**
    * Get's the name of the person
+   *
    * @return the name of the person
    */
-  public String getName(){
+  public String getName() {
     return name;
   }
 }

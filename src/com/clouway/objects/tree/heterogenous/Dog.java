@@ -8,17 +8,19 @@ public class Dog {
 
   /**
    * Set's the dog's name
+   *
    * @param name of the dog
    */
-  public void setName(String name){
-    this.name=name;
+  public void setName(String name) {
+    this.name = name;
   }
 
   /**
    * Get's the name of the dog
+   *
    * @return the name of the dog
    */
-  public String getName(){
+  public String getName() {
     return name;
   }
 }

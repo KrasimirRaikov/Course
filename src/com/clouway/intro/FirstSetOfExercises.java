@@ -27,14 +27,14 @@ class FirstSetOfExercises {
     System.out.println("\nMinimal element of the array is " + arrOp.getMin(array));
     System.out.println("The sum of the array is " + arrOp.getSum(array));
 
-    TwoNumberOperator tn = new TwoNumberOperator();
+    Math tn = new Math();
     System.out.println("Smallest common dividable of 3 and 9 is " + tn.getSD(3, 9));
     System.out.println("Biggest common divider of 12 and 7 is " + tn.getBigCD(12, 7));
 
 
     RandomStringGenerator randStr = new RandomStringGenerator();
     String rS;
-    rS = randStr.getRandString(9, 73, 122);
+    rS = randStr.generate(9, 73, 122);
     System.out.println("\n Your string is " + rS);
 
   }
