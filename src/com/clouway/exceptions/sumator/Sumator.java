@@ -1,7 +1,6 @@
 package com.clouway.exceptions.sumator;
 
 
-
 /**
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
@@ -25,13 +24,12 @@ class Sumator {
     }
 
   }
-  public void printFalse(){
+
+  public void printFalse() {
 
     System.out.print("incorrect input, error №: ");
 
   }
-
-
 
 
 }
