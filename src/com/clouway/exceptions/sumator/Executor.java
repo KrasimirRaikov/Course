@@ -11,7 +11,8 @@ public class Executor {
     String bS = "up?";
     System.out.println(sumator.sum(aS, bS));
 
-    System.out.println(sumator.sum("-43", "7545823"));
+    System.out.println(sumator.sum("532", "321"));
+    System.out.println(sumator.sum("23.53", "17.21"));
 
 
   }

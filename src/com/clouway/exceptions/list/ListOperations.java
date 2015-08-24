@@ -14,6 +14,11 @@ public class ListOperations {
     listSize = listMaxLength;
   }
 
+  /**
+   * Adds object to the list
+   *
+   * @param object
+   */
   public void add(Object object) {
     try {
       if (list.size() < listSize) {
@@ -26,6 +31,9 @@ public class ListOperations {
     }
   }
 
+  /**
+   * Removes the last element of the list
+   */
   public void remove() {
     try {
       if (list.size() > 0) {
@@ -38,6 +46,9 @@ public class ListOperations {
     }
   }
 
+  /**
+   * Prints out the entire list
+   */
   public void printAll() {
     try {
       if (list.size() > 0) {

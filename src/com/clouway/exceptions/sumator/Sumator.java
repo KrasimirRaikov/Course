@@ -1,6 +1,8 @@
 package com.clouway.exceptions.sumator;
 
 
+import java.math.BigDecimal;
+
 /**
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
@@ -13,21 +15,21 @@ class Sumator {
    * @param b String two
    * @return returns the int that is the result of the two Strings
    */
-  public float sum(String a, String b) {
+  public BigDecimal sum(String a, String b) {
     try {
-      float s = Float.parseFloat(a);
-      float t = Float.parseFloat(b);
-      return s + t;
+      BigDecimal k = new BigDecimal(a);
+      BigDecimal m = new BigDecimal(b);
+      k = k.add(m);
+      return k;
     } catch (java.lang.NumberFormatException e) {
-      printFalse();
-      return 0.030003f;
+      falsePrint();
+      return BigDecimal.valueOf(0);
     }
-
   }
 
-  public void printFalse() {
+  private void falsePrint() {
 
-    System.out.print("incorrect input, error №: ");
+    System.out.print("incorrect input, error ");
 
   }
 
