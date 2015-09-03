@@ -7,10 +7,13 @@ import java.util.List;
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
 public class ListOperations {
-  private List<Object> list = new ArrayList<Object>();
+  private List<Object> list = new ArrayList<>();
   private int listSize = 0;
  /* public String message = "";*/
 
+  /*
+  Set's the max size of the list
+   */
   public void setMaxLength(int listMaxLength) {
     listSize = listMaxLength;
   }
@@ -45,8 +48,8 @@ public class ListOperations {
 
   }
 
-  /**
-   * Prints out the entire list
+  /*
+  returns the entire list
    */
   public List<Object> printAll() {
     if(list.isEmpty()){

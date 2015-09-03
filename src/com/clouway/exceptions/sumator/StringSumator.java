@@ -4,7 +4,7 @@ package com.clouway.exceptions.sumator;
 /**
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
-class Sumator {
+class StringSumator {
 
   /**
    * Adds two Strings together
@@ -12,6 +12,7 @@ class Sumator {
    * @param a String one
    * @param b String two
    * @return returns the int that is the result of the two Strings
+   * or 404101 if the strings can't be processed
    */
   public int sum(String a, String b) {
     try {

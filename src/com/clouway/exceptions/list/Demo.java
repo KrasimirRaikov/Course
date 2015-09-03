@@ -37,7 +37,6 @@ public class Demo {
     else{
       System.out.println("You can't print an empty list");
     }
-
   }
 
 

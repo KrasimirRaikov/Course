@@ -5,7 +5,7 @@ package com.clouway.exceptions.sumator;
  */
 public class Executor {
   public static void main(String[] args) {
-    Sumator sumator = new Sumator();
+    StringSumator sumator = new StringSumator();
 
     if (sumator.sum("404", "2")==404101) {
       System.out.println("Sorry ");
