@@ -11,6 +11,6 @@ public class Demo {
   public static void main(String[] args) throws IOException {
     File file1 = new File();
     Path path = Paths.get("src/com/clouway/io/file/term");
-    file1.fileRevert(path);
+    file1.reverse(path);
   }
 }

@@ -18,7 +18,7 @@ public class File {
   /*
   reverts the content of a file and then replaces it
    */
-  public void fileRevert(Path path) throws IOException {
+  public void reverse(Path path) throws IOException {
     BufferedWriter writer = null;
     try (
             Scanner input = new Scanner(Files.newBufferedReader(path, Charset.forName("UTF-8")))) {
@@ -26,7 +26,7 @@ public class File {
       while (input.hasNextLine()) {
         fileContent += input.nextLine();
         if (input.hasNextLine()) {
-          fileContent += "\n";
+          fileContent += String.format("%n");
         }
       }
       char[] ch = fileContent.toCharArray();

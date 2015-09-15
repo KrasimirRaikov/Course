@@ -12,8 +12,11 @@ import java.io.OutputStream;
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
 public class TransferObject {
-  /*
-  transfers data from InputStream to OutputStream
+  /**
+   *Transfers the bytes from Input stream to OutputStream
+   * @param in InputStream to be read
+   * @param out OutputStream to be written to
+   * @throws IOException
    */
   public void transfer(InputStream in, OutputStream out) throws IOException {
     int byteIn;
@@ -23,61 +26,26 @@ public class TransferObject {
     out.flush();
   }
 
-  /*
-  transfers data from FileReader to FileWriter
+  /**
+   * Takes bytes from InputStream from the start int including
+   * until the end int not included and trasfers them to the OutputStream
+   * @param in InputStream to be read
+   * @param out OutputStream to be written to
+   * @param start the number of the byte from which to start the transfer
+   * @param end the number which ends the transfer
+   * @throws IOException
    */
-  public void transfer(FileReader in, FileWriter out) throws IOException {
-    int ch;
-    while ((ch = in.read()) != -1) {
-      out.write(ch);
+  public void  transfer(InputStream in, OutputStream out, int start, int end) throws IOException {
+    for (int i = 1; i < start; i++) {
+      in.read();
     }
-    out.flush();
-  }
-
-  /*
-  transfers data from BufferedReader to BufferedWriter
-   */
-  public void transfer(BufferedReader in, BufferedWriter out) throws IOException {
-    String str;
-    while ((str = in.readLine()) != null) {
-      out.write(str);
-      out.newLine();
-    }
-    out.flush();
-  }
-
-  /*
-  transfers given number of bytes from one stream to another
-   */
-  public void transfer(InputStream in, OutputStream out, int size) throws IOException {
-    for (int i = 0; i < size; i++) {
+    for(;start<end;start++){
       out.write(in.read());
     }
     out.flush();
   }
 
-  /*
-  transfers given number of characters from one stream to another
-   */
-  public void transfer(FileReader in, FileWriter out, int size) throws IOException {
-    for (int i = 0; i < size; i++) {
-      out.write(in.read());
-    }
-    out.flush();
-  }
 
-  /*
-  transfers given number of lines from one stream to another
-   */
-  public void transfer(BufferedReader in, BufferedWriter out, int lines) throws IOException {
-    String str;
-    for (int i = 0; i < lines; i++) {
-      str = in.readLine();
-      out.write(str);
-      out.newLine();
-    }
-    out.flush();
-  }
 
 
 }

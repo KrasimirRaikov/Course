@@ -2,6 +2,7 @@ package com.clouway.io.serial;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -15,7 +16,7 @@ import static java.nio.file.StandardOpenOption.*;
  * @author raikov.krasimir@gmail.com (Krasimir Raikov)
  */
 public class Demo {
-  public static void main(String[] args) {
+  public static void main(String[] args) throws IOException, ClassNotFoundException {
     Dog sammy = new Dog("Sammy", 3, "labrador");
     Dog pedro = new Dog("Pedro", 6, "pitbull");
     Path path = Paths.get("src/com/clouway/io/serial/SerialFile");

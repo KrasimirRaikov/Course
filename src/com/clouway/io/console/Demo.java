@@ -15,7 +15,7 @@ public class Demo {
     Path path = Paths.get(fileName);
 
     System.out.println("Enter Content");
-    new File().writeToFile(path);
+    new File().writeToFile(path, ".");
   }
 
 }
