@@ -1,9 +1,5 @@
 package com.clouway.io.transfer;
 
-import java.io.BufferedReader;
-import java.io.BufferedWriter;
-import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -27,19 +23,17 @@ public class TransferObject {
   }
 
   /**
-   * Takes bytes from InputStream from the start int including
-   * until the end int not included and trasfers them to the OutputStream
-   * @param in InputStream to be read
-   * @param out OutputStream to be written to
-   * @param start the number of the byte from which to start the transfer
-   * @param end the number which ends the transfer
+   * Transfer's given number of bytes from InputStream to OutputStream
+   * @param in the InputStream to be read
+   * @param out the OutputStream to be written to
+   * @param numberOfBytes the number of bytes to be transferred
+   * @param limit the point to which the transfer reaches
    * @throws IOException
    */
-  public void  transfer(InputStream in, OutputStream out, int start, int end) throws IOException {
-    for (int i = 1; i < start; i++) {
-      in.read();
-    }
-    for(;start<end;start++){
+  public void  transfer(InputStream in, OutputStream out, int numberOfBytes, int limit) throws IOException {
+    long s= limit-numberOfBytes-1;
+    in.skip(s);
+    for(int n=0; n<numberOfBytes; n++){
       out.write(in.read());
     }
     out.flush();

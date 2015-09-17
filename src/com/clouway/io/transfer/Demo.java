@@ -19,7 +19,7 @@ public class Demo {
     try (InputStream input = new BufferedInputStream(Files.newInputStream(in));
          OutputStream output = new BufferedOutputStream(Files.newOutputStream(out))) {
       TransferObject trans = new TransferObject();
-      trans.transfer(input, output, 25, 35);
+      trans.transfer(input, output, 9, 35);
     }
   }
 }
